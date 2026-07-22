@@ -96,63 +96,37 @@ body {
   display: none;
 }
 
-/* Hero (animated wave ocean) */
-.hero-ocean {
+/* Hero (real photo background) */
+.hero-photo {
   position: relative;
   overflow: hidden;
   min-height: calc(100vh - 76px);
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(180deg, #8ec9e0 0%, #4a90b8 32%, #1c5d78 60%, #0a2c3d 100%);
+  background: url("../assets/ocean-hero.jpg") no-repeat center 68%;
+  background-size: cover;
 }
 
-.ocean-waves {
+.hero-photo::before {
+  content: "";
   position: absolute;
   inset: 0;
-}
-
-.wave {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 200%;
-  height: 62%;
-}
-
-.wave1 {
-  animation: waveMove 22s linear infinite;
-}
-
-.wave2 {
-  bottom: -2%;
-  height: 52%;
-  animation: waveMove 15s linear infinite reverse;
-}
-
-.wave3 {
-  bottom: -4%;
-  height: 42%;
-  animation: waveMove 8s linear infinite;
-}
-
-@keyframes waveMove {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.35) 70%, rgba(255, 255, 255, 0.6) 100%);
 }
 
 .hero-overlay {
   position: relative;
   z-index: 5;
   text-align: center;
-  color: #fff;
+  color: var(--text);
   padding-top: 80px;
   padding-bottom: 80px;
 }
 
 .hero-greeting {
-  color: rgba(255, 255, 255, 0.85);
-  font-weight: 500;
+  color: var(--accent);
+  font-weight: 600;
   margin: 0 0 8px;
 }
 
@@ -160,12 +134,12 @@ body {
   font-size: 3.2rem;
   margin: 0 0 8px;
   line-height: 1.2;
-  text-shadow: 0 2px 16px rgba(0, 0, 0, 0.35);
+  text-shadow: 0 2px 20px rgba(255, 255, 255, 0.6);
 }
 
 .hero-role {
   font-size: 1.4rem;
-  color: rgba(255, 255, 255, 0.9);
+  color: var(--text-muted);
   margin: 0 0 20px;
   font-weight: 500;
 }
@@ -174,7 +148,7 @@ body {
   max-width: 520px;
   margin-left: auto;
   margin-right: auto;
-  color: rgba(255, 255, 255, 0.85);
+  color: var(--text-muted);
   line-height: 1.7;
   margin-bottom: 32px;
 }
@@ -183,6 +157,12 @@ body {
   display: flex;
   gap: 16px;
   justify-content: center;
+}
+
+.hero-buttons .btn-outline {
+  border-color: rgba(26, 26, 46, 0.35);
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(4px);
 }
 
 /* Buttons */
