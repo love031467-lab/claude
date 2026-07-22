@@ -10,18 +10,6 @@
   --shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
 }
 
-:root[data-theme="dark"] {
-  --bg: #12121c;
-  --bg-alt: #191926;
-  --text: #eceef5;
-  --text-muted: #a3a3b8;
-  --accent: #818cf8;
-  --accent-hover: #a5b4fc;
-  --border: #2a2a3d;
-  --card-bg: #191926;
-  --shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-}
-
 * {
   box-sizing: border-box;
 }
@@ -93,7 +81,7 @@ body {
   gap: 12px;
 }
 
-.theme-toggle, .menu-toggle {
+.menu-toggle {
   background: none;
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 8px;
@@ -129,23 +117,23 @@ body {
   left: 0;
   bottom: 0;
   width: 200%;
-  height: 55%;
+  height: 62%;
 }
 
 .wave1 {
-  animation: waveMove 18s linear infinite;
+  animation: waveMove 22s linear infinite;
 }
 
 .wave2 {
   bottom: -2%;
-  height: 50%;
-  animation: waveMove 13s linear infinite reverse;
+  height: 52%;
+  animation: waveMove 15s linear infinite reverse;
 }
 
 .wave3 {
   bottom: -4%;
-  height: 45%;
-  animation: waveMove 9s linear infinite;
+  height: 42%;
+  animation: waveMove 8s linear infinite;
 }
 
 @keyframes waveMove {
