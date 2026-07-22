@@ -135,17 +135,6 @@ body {
   padding: 22vh 48px 48px;
 }
 
-.hero-photo-box {
-  position: absolute;
-  right: 6%;
-  bottom: -8%;
-  width: 42%;
-  aspect-ratio: 4 / 5;
-  overflow: hidden;
-  border-radius: 4px;
-  box-shadow: var(--shadow);
-}
-
 .hero-bg {
   position: absolute;
   inset: -8%;
@@ -158,6 +147,12 @@ body {
 @keyframes heroPan {
   0% { transform: scale(1) translate(0, 0); }
   100% { transform: scale(1.22) translate(-3%, -2%); }
+}
+
+.hero-scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.75) 0%, rgba(255, 255, 255, 0.35) 45%, rgba(255, 255, 255, 0.1) 75%);
 }
 
 .hero-greeting {
@@ -413,7 +408,7 @@ body {
   }
 
   .hero-left {
-    padding: 14vh 24px 320px;
+    padding: 14vh 24px 48px;
     max-width: 100%;
   }
 
@@ -423,14 +418,6 @@ body {
 
   .hero-buttons {
     flex-wrap: wrap;
-  }
-
-  .hero-photo-box {
-    right: 6%;
-    left: 6%;
-    width: auto;
-    bottom: 6%;
-    aspect-ratio: 4 / 3;
   }
 
   .section {
