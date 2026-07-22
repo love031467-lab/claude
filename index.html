@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>홍길동 | Portfolio</title>
 <meta name="description" content="홍길동의 포트폴리오 웹사이트" />
-<link rel="stylesheet" href="css/style.css?v=16" />
+<link rel="stylesheet" href="css/style.css?v=18" />
 </head>
 <body>
 
@@ -105,15 +105,22 @@
 
   <section id="projects" class="section container">
     <h2 class="section-title">Project</h2>
-    <div class="projects-grid">
+
+    <div class="project-tabs" role="tablist">
+      <button class="project-tab active" data-tab="uiux" role="tab" aria-selected="true">UI/UX</button>
+      <button class="project-tab" data-tab="graphic" role="tab" aria-selected="false">그래픽</button>
+      <button class="project-tab" data-tab="ai" role="tab" aria-selected="false">AI</button>
+    </div>
+
+    <div class="projects-grid" data-tab-panel="uiux">
       <article class="project-card">
         <div class="project-thumb">Project 1</div>
         <div class="project-body">
           <h3>프로젝트 이름 1</h3>
-          <p>프로젝트에 대한 간단한 설명을 여기에 작성하세요. 어떤 문제를 해결했는지, 어떤 기술을 사용했는지 소개해보세요.</p>
+          <p>프로젝트에 대한 간단한 설명을 여기에 작성하세요. 어떤 문제를 해결했는지, 어떤 리서치·설계 과정을 거쳤는지 소개해보세요.</p>
           <div class="project-tags">
-            <span>React</span>
-            <span>Node.js</span>
+            <span>Figma</span>
+            <span>Prototyping</span>
           </div>
           <div class="project-links">
             <a href="#" target="_blank" rel="noopener">데모</a>
@@ -126,10 +133,28 @@
         <div class="project-thumb">Project 2</div>
         <div class="project-body">
           <h3>프로젝트 이름 2</h3>
-          <p>프로젝트에 대한 간단한 설명을 여기에 작성하세요. 어떤 문제를 해결했는지, 어떤 기술을 사용했는지 소개해보세요.</p>
+          <p>프로젝트에 대한 간단한 설명을 여기에 작성하세요. 어떤 문제를 해결했는지, 어떤 리서치·설계 과정을 거쳤는지 소개해보세요.</p>
           <div class="project-tags">
-            <span>Vue</span>
-            <span>Firebase</span>
+            <span>Figma</span>
+            <span>UX Research</span>
+          </div>
+          <div class="project-links">
+            <a href="#" target="_blank" rel="noopener">데모</a>
+            <a href="#" target="_blank" rel="noopener">코드</a>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <div class="projects-grid" data-tab-panel="graphic" hidden>
+      <article class="project-card">
+        <div class="project-thumb">Project 3</div>
+        <div class="project-body">
+          <h3>프로젝트 이름 3</h3>
+          <p>프로젝트에 대한 간단한 설명을 여기에 작성하세요. 어떤 브랜드/비주얼 작업이었는지 소개해보세요.</p>
+          <div class="project-tags">
+            <span>Illustrator</span>
+            <span>Branding</span>
           </div>
           <div class="project-links">
             <a href="#" target="_blank" rel="noopener">데모</a>
@@ -139,13 +164,47 @@
       </article>
 
       <article class="project-card">
-        <div class="project-thumb">Project 3</div>
+        <div class="project-thumb">Project 4</div>
         <div class="project-body">
-          <h3>프로젝트 이름 3</h3>
-          <p>프로젝트에 대한 간단한 설명을 여기에 작성하세요. 어떤 문제를 해결했는지, 어떤 기술을 사용했는지 소개해보세요.</p>
+          <h3>프로젝트 이름 4</h3>
+          <p>프로젝트에 대한 간단한 설명을 여기에 작성하세요. 어떤 브랜드/비주얼 작업이었는지 소개해보세요.</p>
           <div class="project-tags">
-            <span>Python</span>
-            <span>Flask</span>
+            <span>Photoshop</span>
+            <span>InDesign</span>
+          </div>
+          <div class="project-links">
+            <a href="#" target="_blank" rel="noopener">데모</a>
+            <a href="#" target="_blank" rel="noopener">코드</a>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <div class="projects-grid" data-tab-panel="ai" hidden>
+      <article class="project-card">
+        <div class="project-thumb">Project 5</div>
+        <div class="project-body">
+          <h3>프로젝트 이름 5</h3>
+          <p>프로젝트에 대한 간단한 설명을 여기에 작성하세요. AI 도구를 어떻게 디자인 과정에 활용했는지 소개해보세요.</p>
+          <div class="project-tags">
+            <span>Claude</span>
+            <span>Chat GPT</span>
+          </div>
+          <div class="project-links">
+            <a href="#" target="_blank" rel="noopener">데모</a>
+            <a href="#" target="_blank" rel="noopener">코드</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-thumb">Project 6</div>
+        <div class="project-body">
+          <h3>프로젝트 이름 6</h3>
+          <p>프로젝트에 대한 간단한 설명을 여기에 작성하세요. AI 도구를 어떻게 디자인 과정에 활용했는지 소개해보세요.</p>
+          <div class="project-tags">
+            <span>Google Gemini</span>
+            <span>Figma</span>
           </div>
           <div class="project-links">
             <a href="#" target="_blank" rel="noopener">데모</a>

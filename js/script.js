@@ -37,3 +37,22 @@ contactForm.addEventListener("submit", (e) => {
 
   window.location.href = `mailto:dnwndls3445@naver.com?subject=${subject}&body=${body}`;
 });
+
+// Project tabs
+const projectTabs = document.querySelectorAll(".project-tab");
+const projectPanels = document.querySelectorAll("[data-tab-panel]");
+
+projectTabs.forEach((tab) => {
+  tab.addEventListener("click", () => {
+    const target = tab.dataset.tab;
+
+    projectTabs.forEach((t) => {
+      t.classList.toggle("active", t === tab);
+      t.setAttribute("aria-selected", t === tab ? "true" : "false");
+    });
+
+    projectPanels.forEach((panel) => {
+      panel.hidden = panel.dataset.tabPanel !== target;
+    });
+  });
+});
