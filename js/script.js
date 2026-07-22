@@ -21,3 +21,19 @@ navLinks.querySelectorAll("a").forEach((link) => {
 
 // Footer year
 document.getElementById("year").textContent = new Date().getFullYear();
+
+// Contact form -> mailto
+const contactForm = document.getElementById("contactForm");
+
+contactForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  const name = document.getElementById("contactName").value;
+  const email = document.getElementById("contactEmail").value;
+  const message = document.getElementById("contactMessage").value;
+
+  const subject = encodeURIComponent(`포트폴리오 문의 - ${name}`);
+  const body = encodeURIComponent(`이름: ${name}\n이메일: ${email}\n\n${message}`);
+
+  window.location.href = `mailto:dnwndls3445@naver.com?subject=${subject}&body=${body}`;
+});
