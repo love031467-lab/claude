@@ -14,6 +14,14 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: "Pretendard";
+  src: url("../assets/Pretendard-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --bg: #ffffff;
   --bg-alt: #f6f7fb;
@@ -274,8 +282,8 @@ body {
 /* About */
 .about-tagline {
   max-width: 560px;
-  color: #87b6c2;
-  font-weight: 700;
+  color: #438da8;
+  font-weight: 600;
   font-size: 1.6rem;
   line-height: 1.5;
   margin: 0 0 42px;
