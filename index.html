@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>홍길동 | Portfolio</title>
 <meta name="description" content="홍길동의 포트폴리오 웹사이트" />
-<link rel="stylesheet" href="css/style.css?v=20" />
+<link rel="stylesheet" href="css/style.css?v=22" />
 </head>
 <body>
 
@@ -346,6 +346,12 @@
     <p>&copy; <span id="year"></span> 홍길동. All rights reserved.</p>
   </div>
 </footer>
+
+<div class="project-modal" id="projectModal" hidden>
+  <div class="project-modal-backdrop" id="projectModalBackdrop"></div>
+  <button class="project-modal-close" id="projectModalClose" aria-label="닫기">&times;</button>
+  <div class="project-modal-content" id="projectModalContent"></div>
+</div>
 
 <script src="js/script.js"></script>
 </body>
