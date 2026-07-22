@@ -112,7 +112,17 @@ const projectModalContent = document.getElementById("projectModalContent");
 
 function openProjectModal(thumb) {
   projectModalContent.innerHTML = "";
-  projectModalContent.appendChild(thumb.cloneNode(true));
+
+  const modalImageSrc = thumb.dataset.modalImage;
+  if (modalImageSrc) {
+    const img = document.createElement("img");
+    img.src = modalImageSrc;
+    img.alt = thumb.querySelector("img")?.alt || "";
+    projectModalContent.appendChild(img);
+  } else {
+    projectModalContent.appendChild(thumb.cloneNode(true));
+  }
+
   projectModal.hidden = false;
   document.body.style.overflow = "hidden";
 }
