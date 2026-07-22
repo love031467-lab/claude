@@ -133,7 +133,7 @@ body {
   z-index: 2;
   max-width: 560px;
   padding: 22vh 48px 48px;
-  margin-left: 30px;
+  margin-left: 60px;
 }
 
 .hero-bg {
@@ -178,7 +178,27 @@ body {
 
 .hero-buttons {
   display: flex;
-  gap: 16px;
+  gap: 32px;
+}
+
+.hero-buttons .btn-primary,
+.hero-buttons .btn-outline {
+  display: inline-block;
+  padding: 0;
+  background: none;
+  border: none;
+  border-radius: 0;
+  border-bottom: 1px solid transparent;
+  color: var(--text);
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.hero-buttons .btn-primary:hover,
+.hero-buttons .btn-outline:hover {
+  background: none;
+  color: var(--accent);
+  border-bottom-color: var(--accent);
 }
 
 /* Buttons */
