@@ -56,3 +56,20 @@ projectTabs.forEach((tab) => {
     });
   });
 });
+
+// Project carousel arrows
+const prevProjectBtn = document.getElementById("prevProject");
+const nextProjectBtn = document.getElementById("nextProject");
+
+function scrollActivePanel(direction) {
+  const panel = document.querySelector(".projects-grid:not([hidden])");
+  const card = panel && panel.querySelector(".project-card");
+  if (!panel || !card) return;
+
+  const gap = parseFloat(getComputedStyle(panel).columnGap || 24);
+  const amount = card.getBoundingClientRect().width + gap;
+  panel.scrollBy({ left: direction * amount, behavior: "smooth" });
+}
+
+prevProjectBtn.addEventListener("click", () => scrollActivePanel(-1));
+nextProjectBtn.addEventListener("click", () => scrollActivePanel(1));
