@@ -272,6 +272,15 @@ body {
 }
 
 /* About */
+.about-tagline {
+  max-width: 560px;
+  color: var(--text);
+  font-weight: 700;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  margin: 0 0 32px;
+}
+
 .about-text {
   max-width: 700px;
   color: var(--text-muted);
