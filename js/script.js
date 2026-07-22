@@ -57,19 +57,46 @@ projectTabs.forEach((tab) => {
   });
 });
 
-// Project carousel arrows
-const prevProjectBtn = document.getElementById("prevProject");
-const nextProjectBtn = document.getElementById("nextProject");
+// Project carousels: touch swipe works natively; add mouse drag-to-swipe for desktop
+document.querySelectorAll(".projects-grid").forEach((panel) => {
+  let isDown = false;
+  let moved = false;
+  let startX = 0;
+  let scrollStart = 0;
 
-function scrollActivePanel(direction) {
-  const panel = document.querySelector(".projects-grid:not([hidden])");
-  const card = panel && panel.querySelector(".project-card");
-  if (!panel || !card) return;
+  panel.addEventListener("mousedown", (e) => {
+    isDown = true;
+    moved = false;
+    panel.classList.add("dragging");
+    startX = e.pageX;
+    scrollStart = panel.scrollLeft;
+  });
 
-  const gap = parseFloat(getComputedStyle(panel).columnGap || 24);
-  const amount = card.getBoundingClientRect().width + gap;
-  panel.scrollBy({ left: direction * amount, behavior: "smooth" });
-}
+  window.addEventListener("mouseup", () => {
+    isDown = false;
+    panel.classList.remove("dragging");
+  });
 
-prevProjectBtn.addEventListener("click", () => scrollActivePanel(-1));
-nextProjectBtn.addEventListener("click", () => scrollActivePanel(1));
+  panel.addEventListener("mouseleave", () => {
+    isDown = false;
+    panel.classList.remove("dragging");
+  });
+
+  panel.addEventListener("mousemove", (e) => {
+    if (!isDown) return;
+    const dx = e.pageX - startX;
+    if (Math.abs(dx) > 5) moved = true;
+    panel.scrollLeft = scrollStart - dx;
+  });
+
+  panel.addEventListener(
+    "click",
+    (e) => {
+      if (moved) {
+        e.preventDefault();
+        e.stopPropagation();
+      }
+    },
+    true
+  );
+});

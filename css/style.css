@@ -377,41 +377,10 @@ body {
 }
 
 /* Projects */
-.project-tabs-row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-  margin-bottom: 32px;
-}
-
 .project-tabs {
   display: flex;
   gap: 8px;
-}
-
-.carousel-nav {
-  display: flex;
-  gap: 8px;
-  flex-shrink: 0;
-}
-
-.carousel-btn {
-  width: 40px;
-  height: 40px;
-  border: 1px solid var(--border);
-  border-radius: 50%;
-  background: none;
-  color: var(--text);
-  font-size: 1.3rem;
-  line-height: 1;
-  cursor: pointer;
-  transition: all 0.2s ease;
-}
-
-.carousel-btn:hover {
-  border-color: var(--accent);
-  color: var(--accent);
+  margin-bottom: 32px;
 }
 
 .project-tab {
@@ -450,6 +419,14 @@ body {
   margin: 0 -24px;
   padding-left: 24px;
   padding-right: 24px;
+  cursor: grab;
+  user-select: none;
+}
+
+.projects-grid.dragging {
+  cursor: grabbing;
+  scroll-snap-type: none;
+  scroll-behavior: auto;
 }
 
 .projects-grid::-webkit-scrollbar {
@@ -674,11 +651,6 @@ body {
 
   .hero-buttons {
     flex-wrap: wrap;
-  }
-
-  .project-tabs-row {
-    flex-wrap: wrap;
-    gap: 16px;
   }
 
   .project-card {
