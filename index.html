@@ -11,22 +11,46 @@
 
 <header class="navbar">
   <div class="container nav-inner">
-    <a href="#home" class="logo">홍길동</a>
+    <a href="#home" class="logo">HG</a>
     <nav class="nav-links" id="navLinks">
-      <a href="#home">홈</a>
       <a href="#about">소개</a>
       <a href="#skills">기술 스택</a>
       <a href="#projects">프로젝트</a>
       <a href="#contact">연락처</a>
     </nav>
-    <button class="theme-toggle" id="themeToggle" aria-label="다크모드 전환">🌙</button>
-    <button class="menu-toggle" id="menuToggle" aria-label="메뉴 열기">☰</button>
+    <div class="nav-actions">
+      <button class="theme-toggle" id="themeToggle" aria-label="다크모드 전환">🌙</button>
+      <button class="menu-toggle" id="menuToggle" aria-label="메뉴 열기">☰</button>
+    </div>
   </div>
 </header>
 
 <main>
-  <section id="home" class="hero container">
-    <div class="hero-text">
+  <section id="home" class="hero-ocean">
+    <div class="ocean-waves">
+      <svg class="wave wave1" viewBox="0 0 2880 200" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <path id="waveShape1" d="M0,100 C120,140 240,60 360,100 C480,140 600,60 720,100 C840,140 960,60 1080,100 C1200,140 1320,60 1440,100 L1440,200 L0,200 Z"/>
+        </defs>
+        <use href="#waveShape1" fill="#0d3b52" fill-opacity="0.45"/>
+        <use href="#waveShape1" x="1440" fill="#0d3b52" fill-opacity="0.45"/>
+      </svg>
+      <svg class="wave wave2" viewBox="0 0 2880 200" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <path id="waveShape2" d="M0,110 C150,70 300,150 450,110 C600,70 750,150 900,110 C1050,70 1200,150 1350,110 L1440,110 L1440,200 L0,200 Z"/>
+        </defs>
+        <use href="#waveShape2" fill="#146a8c" fill-opacity="0.6"/>
+        <use href="#waveShape2" x="1440" fill="#146a8c" fill-opacity="0.6"/>
+      </svg>
+      <svg class="wave wave3" viewBox="0 0 2880 200" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <path id="waveShape3" d="M0,130 C180,170 360,90 540,130 C720,170 900,90 1080,130 C1260,170 1350,110 1440,130 L1440,200 L0,200 Z"/>
+        </defs>
+        <use href="#waveShape3" fill="#1c8aa8" fill-opacity="0.8"/>
+        <use href="#waveShape3" x="1440" fill="#1c8aa8" fill-opacity="0.8"/>
+      </svg>
+    </div>
+    <div class="hero-overlay container">
       <p class="hero-greeting">안녕하세요, 저는</p>
       <h1>홍길동입니다</h1>
       <p class="hero-role">프론트엔드 개발자</p>
@@ -38,9 +62,6 @@
         <a href="#projects" class="btn btn-primary">프로젝트 보기</a>
         <a href="#contact" class="btn btn-outline">연락하기</a>
       </div>
-    </div>
-    <div class="hero-avatar">
-      <div class="avatar-circle">HG</div>
     </div>
   </section>
 
