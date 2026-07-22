@@ -274,11 +274,11 @@ body {
 /* About */
 .about-tagline {
   max-width: 560px;
-  color: var(--text);
+  color: #87b6c2;
   font-weight: 700;
   font-size: 1.6rem;
   line-height: 1.5;
-  margin: 0 0 32px;
+  margin: 0 0 42px;
 }
 
 .about-text {
@@ -286,17 +286,18 @@ body {
   color: var(--text-muted);
   line-height: 1.8;
   font-size: 1.05rem;
+  margin: 0 0 22px;
 }
 
 .career-title {
   font-size: 1.1rem;
-  margin: 40px 0 20px;
+  margin: 52px 0 26px;
 }
 
 .career-list {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 26px;
 }
 
 .career-item {
@@ -333,7 +334,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 24px;
-  margin-top: 32px;
+  margin-top: 42px;
 }
 
 .info-item {
