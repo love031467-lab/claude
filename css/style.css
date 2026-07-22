@@ -1,6 +1,6 @@
 @font-face {
-  font-family: "NanumMyeongjoEcoBold";
-  src: url("../assets/NanumMyeongjoEcoBold.ttf") format("truetype");
+  font-family: "NanumMyeongjoBold";
+  src: url("../assets/NanumMyeongjoBold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -246,7 +246,7 @@ body {
 }
 
 .section-title {
-  font-family: "NanumMyeongjoEcoBold", -apple-system, BlinkMacSystemFont, "Segoe UI", Pretendard, Roboto, Helvetica, Arial, sans-serif;
+  font-family: "NanumMyeongjoBold", -apple-system, BlinkMacSystemFont, "Segoe UI", Pretendard, Roboto, Helvetica, Arial, sans-serif;
   font-size: 2rem;
   margin: 0 0 32px;
 }
